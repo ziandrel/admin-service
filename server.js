@@ -7,7 +7,7 @@ import express from "express";
 import adminRoutes from "./routes/adminRoutes.js";
 import cors from "cors";
 import { checkConnections } from "./config/db.js";
-import { checkConnections as user_connection } from "../user-service/src/config/db.js";
+// import { checkConnections as user_connection } from "../user-service/src/config/db.js";
 import { checkConnections as business_connection } from "./config/userDB.js";
 import createAllTable from "./utils/dbUtils.js";
 
@@ -25,7 +25,7 @@ app.listen(PORT, async () => {
 
   try {
     await checkConnections();
-    await user_connection();
+    // await user_connection();
     await business_connection();
     await createAllTable();
   } catch (error) {
