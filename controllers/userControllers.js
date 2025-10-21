@@ -1,8 +1,6 @@
 import User from "../model/userModel.js";
 import bcrypt from "bcryptjs";
 
-import { pool } from "../../user-service/src/config/db.js";
-
 export const getUsers = async (req, res) => {
   try {
     const users = await User.get();
