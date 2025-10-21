@@ -1,5 +1,6 @@
 import express from "express";
 import { getAdmins, loginAdmin } from "../controllers/adminControllers.js";
+
 import {
   getUsers,
   createUser,
